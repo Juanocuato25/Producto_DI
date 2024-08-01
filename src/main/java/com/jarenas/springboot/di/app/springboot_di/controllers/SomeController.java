@@ -19,13 +19,18 @@ import org.springframework.web.bind.annotation.PathVariable;
 @RequestMapping("api/products")
 public class SomeController {
 
-
+ 
     @Autowired
     private ProductService productService;
 
+
+    /**
+     * @apiNote EndPoint 
+     * @return Devuelve la lista completa de los productos registrados
+     */
     @GetMapping
     public List<Product> list(){
-        return productService.findAll();
+        return productService.findAll(); 
     }
 
 
