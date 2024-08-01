@@ -26,7 +26,7 @@ public class SomeController {
 
     /**
      * @apiNote EndPoint 
-     * @return Devuelve la lista completa de los productos registrados
+     * @return Devuelve la lista completa de los productos registrados ok
      */
     @GetMapping
     public List<Product> list(){
