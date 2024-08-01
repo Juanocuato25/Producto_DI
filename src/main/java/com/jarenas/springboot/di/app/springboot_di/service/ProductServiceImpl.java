@@ -3,6 +3,7 @@ package com.jarenas.springboot.di.app.springboot_di.service;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.stereotype.Component;
@@ -17,12 +18,14 @@ import com.jarenas.springboot.di.app.springboot_di.repositories.ProductRepositor
 public class ProductServiceImpl implements ProductService {
 
     
+    @Autowired
+    @Qualifier("productList")
     private ProductRepository productRepository;
 
 
-    public ProductServiceImpl(@Qualifier("productList") ProductRepository productRepository){
+    /*public ProductServiceImpl(@Qualifier("productList") ProductRepository productRepository){
         this.productRepository = productRepository;
-    }
+    }*/
 
 
     @Override
